@@ -15,6 +15,7 @@ window.addEventListener("scroll", () => {
   if (window.scrollY > 689) {
     navBar.style.backgroundColor = "#173b6a";
     navbarTitle.style.backgroundColor = "#16457b";
+    navBar.style.transition = "all 0.5s";
   } else if (window.scrollY < 689) {
     navBar.style.backgroundColor = "transparent";
     navBar.style.transition = "all 0.5s";
