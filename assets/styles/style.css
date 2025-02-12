@@ -135,8 +135,7 @@
         display: flex;
         justify-content: space-between;
         padding: 20px 40px;
-        width:460px;
-        position: fixed;
+        width:100%;
         background-color: white;
         border-radius: 20px;
      
@@ -224,10 +223,108 @@ main{
     }
 }
 
+
+/*CAMISETAS 2025*/
+.camisetas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+    
+    .camisetasContainer{
+        display: flex;
+     
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+        padding: 20px;  
+        transition: .5s;
+
+        .camisetasContainer-text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+            padding: 20px;
+            transition: .5s;
+
+            h3{
+                text-align: center;
+                font-size: 2rem;
+                font-weight: 600;
+                color: black;
+            }
+            p{
+                text-align: center;
+                font-size: 1.2rem;
+                font-weight: 400;
+                color: black;
+            }
+
+            button{
+                color: white;
+                background-color: black;
+                padding: 20px 30px;
+            }
+        }
+    }
+    .camisetasContainer-img{
+        img{
+            width: 800px;   
+            height: auto;
+            object-fit: cover;
+            margin: 10px;
+            transition: .5s;
+        }
+
+    }
+}
+
+
+
+.camiseta-titular-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+
+    img{
+        width: 600px;
+        height: auto;
+        object-fit: cover;
+        transition: .5s;
+        padding: 10px;
+    }
+    img:hover{
+        width: 605px;
+        height: auto;
+        object-fit: cover;
+        transition: .5s;
+    }
+
+}
+
+.whatsapp{
+    position: fixed;
+    width: 40px;
+    height: auto;
+    object-fit: cover;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+
 /*PRODUCTOS*/
 
 .products{
-    max-height: 600px;
+    min-height: 800px;
     overflow: auto;
     padding: 20px;
 
@@ -269,7 +366,7 @@ main{
             gap: 20px;
             width: 100%;
             padding: 20px;
-            background-color: rgb(222, 222, 222);
+            background-color: rgb(250, 250, 250);
             border-radius: 25px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             transition: .5s;
@@ -315,5 +412,54 @@ main{
                 }
             }
         }
+    }
+}
+
+
+/*SECTION TIENDA*/
+
+
+
+.tienda{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    gap: 20px;
+    
+ 
+
+    .carousel-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        padding: 20px;
+        gap: 20px;
+        transition: .5s;
+
+        img{
+            width: 80px;
+            height: auto;
+            object-fit: cover;
+            margin: 10px;
+            transition: .5s;
+        }
+      
+        p{
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: rgb(10, 10, 122);
+        }
+        span{
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 600;
+            color: rgb(10, 10, 122);
+        }
+
     }
 }
