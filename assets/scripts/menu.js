@@ -12,7 +12,7 @@ closeMenuBtn.addEventListener("click", () => {
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 689) {
-    navBar.style.backgroundColor = "rgb(10, 10, 122)";
+    navBar.style.backgroundColor = "rgb(24, 24, 107)";
   } else if (window.scrollY < 689) {
     navBar.style.backgroundColor = "transparent";
     navBar.style.transition = "all 0.5s";
