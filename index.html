@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/icons/iconWeb.jpeg" type="image/webp">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <title>Rosario Central</title>
+</head>
+<body>
+    <nav class="navbar">    
+        <div class="navbar-title">
+            <p>ROSARIO CENTRAL</p>
+        </div>
+       <ul class="navbar_menu">
+        <li class="navbar_menu-item1">
+            <img src="assets/img/icons/iconoMenu.svg" alt="menuHamburguesa icon" class="navbar_menuHamburguesa"> 
+        </li>
+        <li >
+            <img src="assets/img/icons/iconWeb-removebg-preview.png" alt="" class="navbar_logo">
+        </li>
+        <li>
+            <img src="assets/img/icons/bolsaCompras.svg" alt="" class="navbar_cart">
+        </li>
+       </ul>
+       <ul class="menuHamburguesa" style="display: none;">
+        <img src="assets/img/icons/cerrarIconAzul.svg" alt="" class="menuHamburguesa_cerrar">
+        <li>INICIO</li>
+        <li>PRODUCTOS</li>
+        <li>CONTACTO</li>
+    </ul>
+
+    <div class="cart-container">
+    <ul class="carrito" style="display: none;">
+        <div class="carrito-icons">
+            <ul class="carrito-icons-container">
+                <li><h4>CARRITO DE COMPRAS</h4></li>
+                <li><img src="assets/img/icons/cerrarIconAzul.svg" alt="" class="carrito_cerrar"></li>
+            </ul>
+           
+                
+        </div>
+    </ul>
+</div>
+   
+    </nav>
+    <section class="lecoqLogo">
+        <img src="fondolecoq.webp" alt="">
+    </section>
+    <main>
+        <h2>LLEVAMOS TU PASIÓN A TODOS LADOS</h2>
+        <p>VER PRODUCTOS</p>
+        <section class="products">
+            <div class="products-container">
+                <div class="botones">
+                    <button>TODOS</button>
+                    <button>CAMISETAS</button>
+                    <button>BUZOS</button>
+                    <button>CHOMBAS</button>
+                    <button>VARIOS</button>
+                </div>
+                <div id="products-items">
+                </div>
+            </div>
+         </section>
+    </main>
+    <script src="assets/scripts/productos.js"></script>
+    <script src="assets/scripts/renderProducts.js"></script>
+    <script src="assets/scripts/renderCartProducts.js"></script>
+    <script src="assets/scripts/menu.js"></script>
+    <script src="assets/scripts/carrito.js"></script>
+    
+    
+</body>
+</html>

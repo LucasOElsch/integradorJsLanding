@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+/*NAVBAR*/
+.navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    .navbar-title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(28, 68, 143);
+        opacity: 0.3;
+        height: 30px;
+        
+        p{
+            color: white;
+            text-align: center;
+            font-size: 1.1rem;
+            
+            
+        }
+    
+    }
+.navbar_menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 10px 20px;
+
+    li {
+            list-style: none;
+            cursor: pointer;
+        
+    }
+
+    .navbar_menu-item1{
+        img{
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            transition: .5s;
+        }
+    }
+
+    .navbar_menu-item1:hover{
+        img{
+            width: 35px;
+            height: 35px;
+            transition: .5s;
+        }
+    }
+
+    .navbar_logo {
+            width: 70px;
+            height: auto;
+            margin: 0 auto;
+    }
+}
+
+
+.menuHamburguesa{
+    width: 300px;
+    background-color: white;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    position: fixed;
+    border-radius: 20px;
+    
+    
+    li{
+        list-style: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: rgb(28, 68, 143);
+        cursor: pointer;
+        transition: .5s;
+    }
+
+    li:hover{
+        color: rgb(222, 222, 222);
+        font-size: 1.1rem;
+        transition: .5s;
+    }
+    
+    .menuHamburguesa_cerrar{
+        width: 25px;
+        position: relative;
+        right: -92%;
+        cursor: pointer;
+    }
+}
+
+.menuHamburguesa.open {
+    width: 300px;
+}
+}
+
+
+.cart-container{
+    height: 100vh;
+    position: fixed;
+}
+.carrito{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    background-color: white;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    border-radius: 20px;
+    overflow: scroll;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    padding: 20px;
+    gap: 20px;
+    
+
+    .carrito-icons{
+        
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 40px;
+        width:460px;
+        position: fixed;
+        background-color: white;
+        border-radius: 20px;
+     
+        transition: .5s;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+
+        .carrito-icons-container{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            img{
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+                transition: .5s;
+            }
+            li{
+                list-style: none;
+                cursor: pointer;
+                transition: .5s;
+                display: flex;
+                h4{
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    color: rgb(10, 10, 122);
+                }
+            }
+        }
+    }
+}
+
+.lecoqLogo{
+    width: 100%;
+    height: 900px;
+   
+    img{
+        width: 100%;
+        height: 800px;
+        object-fit: cover;
+    }
+
+    
+}
+
+
+.carrito-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding:20px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: .5s;
+
+    img{
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        margin: 10px;
+        transition: .5s;
+    }
+}
+
+
+/*MAIN*/
+
+main{
+    h2{
+        text-align: center;
+        font-size: 2.2rem;
+        font-weight: 600;
+        margin: 20px 0;
+        color: rgb(10, 10, 122);
+    }
+    p{
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin: 20px 0;
+        color: rgb(10, 10, 122);
+    }
+}
+
+/*PRODUCTOS*/
+
+.products{
+    .products-container{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 20px;
+
+        .botones{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            button{
+                padding: 10px 20px;
+                margin: 0 10px;
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: white;
+                background-color: rgb(28, 68, 143);
+                border: none;
+                cursor: pointer;
+                transition: .5s;
+                border-radius: 25px;
+            }
+
+            button:hover{
+                background-color: rgb(10, 10, 122);
+                transition: .5s;
+               
+                
+            }  
+        }
+
+        #products-items{
+            display: flex;
+
+           .products-item{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 25px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: .5s;
+
+            img{
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+                margin: 10px;
+                transition: .5s;
+            }
+            h3{
+                text-align: center;
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: rgb(10, 10, 122);
+            }
+            button{
+                padding: 10px 20px;
+                margin: 10px 0;
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: white;
+                background-color: rgb(28, 68, 143);
+                border: none;
+                cursor: pointer;
+                transition: .5s;
+                border-radius: 25px;
+            }
+           }
+
+        }
+    }
+}
