@@ -9,17 +9,9 @@ const renderProducts = (products) => {
       <img src="${product.img}" alt="${product.nombre}" />
       <h3>${product.nombre}</h3>
       <p>$${product.precio}</p>
-      <button class="boton ${product.id}">Agregar al carrito</button>
+      <button class="btnAddCart ${product.id}">Agregar al carrito</button>
     `;
-    const btnAddToCart = productCard.querySelector("button");
-    btnAddToCart.addEventListener("click", () => {
-      if (selectedProducts.includes(product)) {
-        return;
-      } else {
-        selectedProducts.push(product);
-        renderSelectedProducts();
-      }
-    });
+
     productsContainer.appendChild(productCard);
   });
 };
