@@ -4,12 +4,20 @@ const menuHamburguesa = document.querySelector(".menuHamburguesa");
 const navBar = document.querySelector(".navbar");
 const navbarTitle = document.querySelector(".navbar-title");
 openMenuBtn.addEventListener("click", () => {
-  menuHamburguesa.style.display = "block";
+  openMenu();
 });
 
 closeMenuBtn.addEventListener("click", () => {
-  menuHamburguesa.style.display = "none";
+  closeMenu();
 });
+
+function closeMenu() {
+  menuHamburguesa.style.display = "none";
+}
+
+function openMenu() {
+  menuHamburguesa.style.display = "block";
+}
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 689) {

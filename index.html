@@ -17,7 +17,7 @@
             <img src="assets/img/icons/iconoMenu.svg" alt="menuHamburguesa icon" class="navbar_menuHamburguesa"> 
         </li>
         <li >
-            <img src="assets/img/icons/iconWeb-removebg-preview.png" alt="" class="navbar_logo">
+            <a href="#"> <img src="assets/img/icons/iconWeb-removebg-preview.png" alt="" class="navbar_logo"></a>
         </li>
         <li>
             <img src="assets/img/icons/bolsaCompras.svg" alt="" class="navbar_cart">
@@ -26,13 +26,13 @@
        <ul class="menuHamburguesa" style="display: none;">
            
                 <img src="assets/img/icons/cerrarIconAzul.svg" alt="" class="menuHamburguesa_cerrar">
-                <li>INICIO</li>
-                <li>PRODUCTOS</li>
-                <li>CONTACTO</li>
-                <li>TEMPORADA 2025</li>
+                <li><a href="#">INICIO</a></li>
+                <li><a href="#productos">PRODUCTOS</a></li>
+                <li><a href="#contacto">CONTACTO</a></li>
+                <li><a href="#camisetas">TEMPORADA 2025</a></li>
            
             <div class="login-register">
-                <a href="">Iniciar Sesion</a>
+                <a href="login.html">Iniciar Sesion</a>
                 <a href="">Registrarse</a>
             </div>
         </ul>
@@ -54,7 +54,7 @@
         <img src="./assets/img/icons/fondoLecoq.webp" alt="">
     </section>
     <main>
-        <section class="camisetas">
+        <section class="camisetas" id="camisetas">
             <h2>TEMPORADA 2025</h2>
             <div class="camisetasContainer">
                 <div class="camisetasContainer-text">
@@ -93,9 +93,9 @@
         <picture>
             <img src="assets/img/icons/iconWhatsapp.png" alt="" class="whatsapp">
         </picture>
-        <h2>LLEVAMOS TU PASIÓN A TODOS LADOS</h2>
+        <h2 id="productos">LLEVAMOS TU PASIÓN A TODOS LADOS</h2>
         <p>VER PRODUCTOS</p>
-        <section class="products">
+        <section class="products" >
             <div class="products-container">
                 <div class="botones">
                     <button value="todos" id="filter-btn-1">TODOS</button>
@@ -142,7 +142,8 @@
                 </div>
          </section>
 
-         <section  id="contacto">
+         <section id="contacto">
+           
             <div class="contacto">
                 <h2>CONTACTO</h2>
                 <p>¿Tenés alguna duda o consulta? Te contactamos!</p>
@@ -151,6 +152,10 @@
                     <input type="email" placeholder="Email">
                     <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
                     <button>ENVIAR</button>
+                    <div class="mb-3">
+                        <div class="g-recaptcha" data-sitekey="6LfzqNYqAAAAAOvM7Z3bk26e52DEt2wOyIkuPoiZ"></div>
+
+                    </div>
                 </form>
             </div>
       

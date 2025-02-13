@@ -112,13 +112,19 @@
         color: rgb(28, 68, 143);
         cursor: pointer;
         transition: .5s;
+
+        a{
+            text-decoration: none;
+            color: rgb(28, 68, 143);
+        }
+        a:hover{
+            color: rgb(222, 222, 222);
+            font-size: 1.1rem;
+            transition: .5s;
+        }
     }
 
-    li:hover{
-        color: rgb(222, 222, 222);
-        font-size: 1.1rem;
-        transition: .5s;
-    }
+   
     
     .menuHamburguesa_cerrar{
         width: 25px;
