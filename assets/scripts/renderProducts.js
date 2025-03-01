@@ -9,7 +9,7 @@ const renderProducts = (products) => {
       <img src="${product.img}" alt="${product.nombre}" />
       <h3>${product.nombre}</h3>
       <p>$${product.precio}</p>
-      <button class="btnAddCart ${product.id}">Agregar al carrito</button>
+      <button class="btnAddCart ${product.id}" data-id=${product.id}>Agregar al carrito</button>
     `;
 
     productsContainer.appendChild(productCard);

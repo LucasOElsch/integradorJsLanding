@@ -1,0 +1,418 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f1f1f1;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    
+}
+
+
+/*NAVBAR*/
+.navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+   
+    .navbar-title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(28, 68, 143);
+        
+        height: 30px;
+        
+        p{
+            color: white;
+            text-align: center;
+            font-size: 1.1rem;
+            
+            
+        }
+    
+    }
+.navbar_menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(28, 68, 143);
+
+    li {
+            list-style: none;
+            cursor: pointer;
+        
+    }
+
+    .navbar_menu-item1{
+        img{
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            transition: .5s;
+        }
+    }
+
+    .navbar_menu-item1:hover{
+        img{
+            width: 35px;
+            height: 35px;
+            transition: .5s;
+        }
+    }
+
+    .navbar_logo {
+            width: 70px;
+            height: auto;
+            margin: 0 auto;
+    }
+}
+
+
+.menuHamburguesa{
+    width: 300px;
+    background-color: white;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    position: fixed;
+    border-radius: 0 20px 0 0;
+
+    .login-register{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        border-radius: 20px;
+        background-color: rgb(250, 250, 250);
+
+        
+        a{
+            color:rgb(28, 68, 143);
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        a:hover{
+            color: rgb(10, 10, 122);
+            font-size: 1.1rem;
+            transition: .5s;
+        }
+    }
+ 
+    
+    li{
+        list-style: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: rgb(28, 68, 143);
+        cursor: pointer;
+        transition: .5s;
+
+        a{
+            text-decoration: none;
+            color: rgb(28, 68, 143);
+        }
+        a:hover{
+            color: rgb(222, 222, 222);
+            font-size: 1.1rem;
+            transition: .5s;
+        }
+    }
+
+   
+    
+    .menuHamburguesa_cerrar{
+        width: 25px;
+        position: relative;
+        right: -92%;
+        cursor: pointer;
+    }
+}
+
+.menuHamburguesa.open {
+    width: 300px;
+}
+}
+
+
+.cart-container{
+    height: 90vh;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    right: 0;
+    border-radius: 25px 0 0 0 ;
+   
+
+    .total-cart{ 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: rgb(28, 68, 143);
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 600;
+       
+        z-index: 2000;
+
+        #comprarBtn {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: white;
+            color: black;
+            border: none;
+            cursor: pointer;
+            transition: .5s;
+            border-radius: 25px;
+        }
+    }
+
+    .closeCart {
+        display: flex;
+        padding: 20px;
+        height: 100px;
+        width: 100%;
+        border-bottom: 3px solid rgb(28, 68, 143);
+        img{
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            transition: .5s;
+        }
+        
+        h4{
+            
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: rgb(10, 10, 122);
+            padding: 15px;
+        }
+    }
+}
+.carrito {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+  
+}
+
+.cartProduct {
+    list-style: none;
+}
+
+
+.card-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 40px 20px;
+    background-color: snow;
+
+    .cardBtns {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: rgb(28, 68, 143);
+        padding: 10px 20px;
+        font-size: 1.2rem;
+    
+        border: none;
+        cursor: pointer;
+        transition: .5s;
+        border-radius: 25px;
+
+        span {
+            font-family: 1rem;
+            color: white;
+        }
+
+        img{
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            transition: .5s;
+        }
+
+    }
+    
+    
+    .product-img-name {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 50%;
+    
+        img{
+            width: 200px;
+            height:200px;
+            object-fit: contain;
+            margin: 10px;
+            transition: .5s;
+        }
+    
+        h4{
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 600;
+            color: rgb(10, 10, 122);
+        }
+    }
+    span{
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: rgb(10, 10, 122);
+    }
+
+    img{
+        width: 30px;
+        height: auto;
+        cursor: pointer;
+    }
+}
+
+
+
+
+/*FORMULARIO*/
+
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    width: 100%;
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+
+ 
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    label{
+        font-size: 1.2rem;
+        color: #333;
+        min-width: 100%;
+    }
+  
+    input{
+        min-width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        outline: none;
+    }
+    button{
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: white;
+        background-color: rgb(28, 68, 143);
+        border: none;
+        cursor: pointer;
+        transition: .5s;
+        border-radius: 25px;
+    }
+
+    #warnings-register {
+        color: rgb(187, 30, 30);
+        font-size: 1rem;
+        padding: 5px 0px;
+    }
+}
+
+
+
+/*FOOTER*/
+
+footer{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(28, 68, 143);
+    color: white;
+    padding: 20px;
+    gap: 20px;
+    width: 100%;
+  
+    max-height: 400px;
+
+    .footer-logo{
+        width: 80px;
+    }
+
+}
+
+
+.footer-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width:400px;
+    padding: 0 20px;
+    margin: 0 auto;
+  
+
+
+    img{
+        width: 30px;
+        height: auto;
+        object-fit: cover;
+        cursor: pointer;
+        transition: .5s;
+    }
+    span{
+        font-size: 1rem;
+        color: white;
+    }
+}

@@ -24,7 +24,6 @@
         </li>
        </ul>
        <ul class="menuHamburguesa" style="display: none;">
-           
                 <img src="assets/img/icons/cerrarIconAzul.svg" alt="" class="menuHamburguesa_cerrar">
                 <li><a href="#">INICIO</a></li>
                 <li><a href="#productos">PRODUCTOS</a></li>
@@ -32,22 +31,36 @@
                 <li><a href="#camisetas">TEMPORADA 2025</a></li>
            
             <div class="login-register">
-                <a href="login.html">Iniciar Sesion</a>
-                <a href="">Registrarse</a>
+                <div id="loginFalse">
+                    <a href="login.html">Iniciar Sesion</a>
+                    <a href="register.html">Registrarse</a>
+                </div>
+               <div id="loginTrue" style="display: none;">
+                    <div class="userIconName">
+                        <img src="assets/img/icons/userIconAzul.svg" alt="">
+                        <p id="userName">Usuario</p>
+                    </div>
+                    <a href="">Perfil</a>
+                    <a href="#">Cerrar Sesion</a>
+               </div>
             </div>
         </ul>
 
-    <div class="cart-container">
-    <ul class="carrito" style="display: none;">
-        <div class="carrito-icons">
-            <ul class="carrito-icons-container">
-                <li><h4>CARRITO DE COMPRAS</h4></li>
-                <li><img src="assets/img/icons/cerrarIconAzul.svg" alt="" class="carrito_cerrar"></li>
-            </ul>
+    <div class="cart-container" style="display: none;"> 
+        <div class="closeCart">
+            <img src="assets/img/icons/cerrarIconAzul.svg" alt="" class="cart-close">
+            <h4>CARRITO...</h4>
         </div>
-    </ul>
-    
-</div>
+            <ul class="carrito">
+
+            </ul>
+
+        <div class="total-cart">
+            <h4>TOTAL DEL CARRITO</h4>
+            <p id="priceTotal">$0</p>
+            <button id="comprarBtn">COMPRAR</button>
+        </div>
+    </div>
    
     </nav>
     <section class="lecoqLogo">
@@ -148,14 +161,12 @@
                 <h2>CONTACTO</h2>
                 <p>¿Tenés alguna duda o consulta? Te contactamos!</p>
                 <form action="" class="contact-form">
-                    <input type="text" placeholder="Nombre">
-                    <input type="email" placeholder="Email">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
-                    <button>ENVIAR</button>
-                    <div class="mb-3">
-                        <div class="g-recaptcha" data-sitekey="6LfzqNYqAAAAAOvM7Z3bk26e52DEt2wOyIkuPoiZ"></div>
-
-                    </div>
+                    <input type="text" name="name" placeholder="Nombre" id="nameInput">
+                    <input type="email" name="email" placeholder="Email" id="emailInput">
+                    <input type="tel" name="phone" placeholder="Telefono" id="phoneInput">
+                    <textarea name="message" id="mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                    <button type="submit" id="submitBtn">ENVIAR</button>
+                    <p id="warnings"></p>
                 </form>
             </div>
       
@@ -192,7 +203,6 @@
     <script src="assets/scripts/renderCartProducts.js"></script>
     <script src="assets/scripts/menu.js"></script>
     <script src="assets/scripts/carrito.js"></script>
-    
-    
+    <script src="assets/scripts/validateFormContact.js"></script>
 </body>
 </html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosario Central</title>
+    <link rel="stylesheet" href="assets/styles/register.css">
+</head>
+<body>
+    <nav class="navbar">    
+        <div class="navbar-title">
+            <p>ROSARIO CENTRAL</p>
+        </div>
+       <ul class="navbar_menu">
+        <li class="navbar_menu-item1">
+            <img src="assets/img/icons/iconoMenu.svg" alt="menuHamburguesa icon" class="navbar_menuHamburguesa"> 
+        </li>
+        <li >
+            <a href="index.html"> <img src="assets/img/icons/iconWeb-removebg-preview.png" alt="" class="navbar_logo"></a>
+        </li>
+        <li>
+            <img src="assets/img/icons/bolsaCompras.svg" alt="" class="navbar_cart">
+        </li>
+       </ul>
+       <ul class="menuHamburguesa" style="display: none;">
+           
+                <img src="assets/img/icons/cerrarIconAzul.svg" alt="" class="menuHamburguesa_cerrar">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="#productos">PRODUCTOS</a></li>
+                <li><a href="#contacto">CONTACTO</a></li>
+                <li><a href="#camisetas">TEMPORADA 2025</a></li>
+           
+            <div class="login-register">
+                <a href="login.html">Iniciar Sesion</a>
+                <a href="">Registrarse</a>
+            </div>
+        </ul>
+
+    <div class="cart-container" style="display: none;"> 
+        <div class="closeCart">
+            <img src="assets/img/icons/cerrarIconAzul.svg" alt="" class="cart-close">
+            <h4>CARRITO...</h4>
+        </div>
+            <ul class="carrito">
+
+            </ul>
+
+        <div class="total-cart">
+            <h4>TOTAL DEL CARRITO</h4>
+            <p id="priceTotal">$0</p>
+            <button id="comprarBtn">COMPRAR</button>
+        </div>
+    </div>
+    </nav>
+
+
+<div class="register-container">
+    
+    <form action="" id="registerForm">
+        <h1>REGISTRO</h1>
+        <label for="nameInput-register">
+            Nombre de usuario:
+            <input type="text" name="username" id="nameInput-register">
+        </label>
+        <label for="mailInput-register">
+            Correo electrónico:
+            <input type="email" name="email" id="mailInput-register">
+        </label>
+        <label for="phoneInput-register">
+            Teléfono:
+            <input type="tel" name="phone" id="phoneInput-register">
+        </label>
+        <label for="passwordInput-register">
+            Contraseña:
+            <input type="password" name="password" id="passwordInput-register">
+        </label>
+        <label for="confirmPasswordInput-register">
+            Confirmar contraseña:
+            <input type="password" name="confirmPassword" id="confirmPasswordInput-register">
+        </label>
+        <label for="terms" class="terms">
+            <input type="checkbox" name="terms" id="terms">
+            Acepto los términos y condiciones
+        </label>
+        <button>Crear Cuenta</button>
+        <p id="warnings-register"></p>
+    </form>
+</div>
+<footer>
+         
+    <div class="footer-item">
+        
+    </div>
+    <div class="footer-item">
+        <img src="assets/img/icons/instagram-icon.png" alt="">
+        <span>@rosariocentral</span>
+    </div>
+    <div class="footer-item">
+        <img src="assets/img/icons/telefonoIcon.svg" alt="">
+        <span> 341-512-1234 </span>
+    </div>
+    <div class="footer-item">
+        <img src="assets/img/icons/mailIcon.svg" alt="">
+        <span>contacto@rosariocentral.com</span>
+    </div>
+    <div class="footer-item">
+        <img src="assets/img/icons/ubicacionIcon.svg" alt="">
+        <span>Mitre 875 Galeria Libertad Local 14 y 15</span>
+    </div>
+    <img src="assets/img/icons/iconWeb-removebg-preview.png" alt="" class="footer-logo">
+    
+</footer>
+<script src="assets/scripts/menu.js"></script>
+<script src="assets/scripts/carrito.js"></script>
+<script src="assets/scripts/listaUsuarios.js"></script>
+<script src="assets/scripts/generateUser.js"></script>
+</body>
+</html>

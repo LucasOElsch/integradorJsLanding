@@ -3,6 +3,8 @@ const closeMenuBtn = document.querySelector(".menuHamburguesa_cerrar");
 const menuHamburguesa = document.querySelector(".menuHamburguesa");
 const navBar = document.querySelector(".navbar");
 const navbarTitle = document.querySelector(".navbar-title");
+let userLogIn = true;
+
 openMenuBtn.addEventListener("click", () => {
   openMenu();
 });
@@ -29,3 +31,8 @@ window.addEventListener("scroll", () => {
     navBar.style.transition = "all 0.5s";
   }
 });
+
+if (userLogIn) {
+  document.getElementById("loginFalse").style.display = "none";
+  document.getElementById("loginTrue").style.display = "flex";
+}
