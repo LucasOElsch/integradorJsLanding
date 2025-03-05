@@ -36,8 +36,22 @@ function checkUser(usuario, contrasena) {
     }
   });
   if (userNameOk && userPasswordOk) {
-    console.log(userLogIn);
     alert(`Bienvenido ${usuario.toUpperCase()}`);
     window.location.href = "http://127.0.0.1:5500/index.html";
   }
+
+  changeTextContent();
+  console.log(userLogIn);
+}
+
+async function changeTextContent() {
+  let promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("hecho!"), 1000);
+    let loginFalse = document.getElementById("loginFalse");
+    loginFalse.style.display = "none";
+    console.log(loginFalse);
+    let loginTrue = document.getElementById("loginTrue");
+    loginTrue.style.display = "flex";
+    document.getElementById("loginTrue").style.display = "flex";
+  });
 }

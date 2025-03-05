@@ -243,6 +243,10 @@
     list-style: none;
 }
 
+.productStorage {
+    list-style: none;
+}
+
 
 .card-container{
     display: flex;
@@ -724,3 +728,7 @@ footer{
         color: white;
     }
 }
+
+
+/*RESPONSIVE*/
+
