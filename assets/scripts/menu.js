@@ -30,3 +30,27 @@ window.addEventListener("scroll", () => {
     navBar.style.transition = "all 0.5s";
   }
 });
+
+function changeMenu(value, user) {
+  if (value === "true") {
+    document.getElementById("loginFalse").style.display = "none";
+    document.getElementById("loginTrue").style.display = "flex";
+
+    document.getElementById("userName").textContent = `Hola, ${user}`;
+  }
+}
+
+let logIn = sessionStorage.getItem("loginTrue");
+let user = sessionStorage.getItem("userName");
+console.log(user);
+
+changeMenu(logIn, user);
+
+const cerrarSesion = document
+  .getElementById("cerrarSesion")
+  .addEventListener("click", () => {
+    sessionStorage.clear();
+    location.reload();
+    document.getElementById("loginFalse").style.display = "block";
+    document.getElementById("loginTrue").style.display = "none";
+  });

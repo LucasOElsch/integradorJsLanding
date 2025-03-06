@@ -110,6 +110,10 @@ body{
             transition: .5s;
         }
     }
+
+    #userName{
+        text-transform: uppercase;
+    }
  
     
     li{

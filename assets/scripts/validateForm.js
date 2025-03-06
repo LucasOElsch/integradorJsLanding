@@ -14,17 +14,19 @@ ojoInput.addEventListener("click", () => {
 });
 
 const loginForm = document.getElementById("loginForm");
-
+let user = null;
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const userLogin = document.getElementById("nameInput").value;
   const userPassword = document.getElementById("passwordInput").value;
+  user = userLogin;
   //VALIDAR EL USUARIO INGRESADO
   checkUser(userLogin, userPassword);
 });
 
 function checkUser(usuario, contrasena) {
+  sessionStorage.clear();
   let userNameOk = false;
   let userPasswordOk = false;
   usuarios.forEach((user) => {
@@ -38,20 +40,7 @@ function checkUser(usuario, contrasena) {
   if (userNameOk && userPasswordOk) {
     alert(`Bienvenido ${usuario.toUpperCase()}`);
     window.location.href = "http://127.0.0.1:5500/index.html";
+    sessionStorage.setItem("loginTrue", true);
+    sessionStorage.setItem("userName", user);
   }
-
-  changeTextContent();
-  console.log(userLogIn);
-}
-
-async function changeTextContent() {
-  let promise = new Promise((resolve, reject) => {
-    setTimeout(() => resolve("hecho!"), 1000);
-    let loginFalse = document.getElementById("loginFalse");
-    loginFalse.style.display = "none";
-    console.log(loginFalse);
-    let loginTrue = document.getElementById("loginTrue");
-    loginTrue.style.display = "flex";
-    document.getElementById("loginTrue").style.display = "flex";
-  });
 }

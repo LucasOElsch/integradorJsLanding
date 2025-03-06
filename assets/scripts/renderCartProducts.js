@@ -1,10 +1,8 @@
 let allContainerCart = document.getElementById("products-items");
 let allProductsCart = [];
-let inCartProducts = [];
+
 const priceTotalElement = document.getElementById("priceTotal");
-
 const totalCart = document.getElementById("total-cart");
-
 /*CONTENEDOR DEL CARRITO*/
 const cartContainer = document.querySelector(".carrito");
 
@@ -33,10 +31,9 @@ function getProductInfo(product) {
   };
 
   const productFind = allProductsCart.find((e) => e.id === productInfo.id);
+
   if (productFind) {
     productFind.cantidad += 1;
-    localStorage.removeItem(`product ${productFind.id}`);
-    guardar(`product ${productFind.id}`, productFind);
     let i = allProductsCart.findIndex((e) => e.id === productInfo.id);
     allProductsCart.splice(i, 1);
     allProductsCart.unshift(productFind);
@@ -77,7 +74,6 @@ function renderCart() {
     </div>
     `;
     guardar(`product ${product.id}`, product);
-    inCartProducts.push(product);
     cartProduct.innerHTML = productCard;
     cartContainer.appendChild(cartProduct);
   });
@@ -85,47 +81,50 @@ function renderCart() {
   loadPrice(allProductsCart);
 }
 
+if (localStorage.length > 0) {
+  renderCartStorage();
+}
 function renderCartStorage() {
-  for (let i = 1; i <= localStorage.length; i++) {
-    let productStorage = localStorage.getItem(`product ${i}`);
-    productStorage = JSON.parse(productStorage);
-    allProductsCart.push(productStorage);
-    const productStorageCard = document.createElement("li");
-    productStorageCard.setAttribute("class", `productStorage ${i}`);
-    const card = `
-    <div class="card-container" id="cart-product ${productStorage.id}">
+  let cartStorage = [];
+  for (let i = 0; i < localStorage.length; i++) {
+    let productKey = localStorage.key(i);
+    let product = localStorage.getItem(productKey);
+    cartStorage.push(JSON.parse(product));
+  }
+  document.querySelector(".carrito").innerHTML = "";
+  cartStorage.forEach((product) => {
+    const cartProduct = document.createElement("li");
+    cartProduct.setAttribute("class", `cartProduct ${product.id} `);
+    productCard = `
+    <div class="card-container" id="cart-product ${product.id}">
       <div class="product-img-name">
-        <img src="${productStorage.imagen}">
-        <h4>${productStorage.nombre}</h4>
+        <img src="${product.imagen}">
+        <h4>${product.nombre}</h4>
       </div>
-      <span id="cart-productPrice ${productStorage.id}">${loadPriceCard(
-      productStorage.precio,
-      productStorage.cantidad
+      <span id="cart-productPrice ${product.id}">${loadPriceCard(
+      product.precio,
+      product.cantidad
     )}</span>
         <div class="cardBtns">
           <img src="./assets/img/icons/masIcon.svg" class="masBtn" id="${
-            productStorage.id
+            product.id
           }">
-          <span id="productQuantity ${productStorage.id}">${
-      productStorage.cantidad
-    }</span>
+          <span id="productQuantity ${product.id}">${product.cantidad}</span>
           <img src="./assets/img/icons/menosIcon.svg" class="menosBtn" id="${
-            productStorage.id
+            product.id
           }">
         </div>
       <img src="./assets/img/icons/cerrarIconAzul.svg" class="borrarProductBtn" id="${
-        productStorage.id
+        product.id
       }"> 
     </div>
     `;
-    productStorageCard.innerHTML = card;
-    cartContainer.appendChild(productStorageCard);
-    loadPrice(allProductsCart);
-  }
+    allProductsCart.push(product);
+    cartProduct.innerHTML = productCard;
+    cartContainer.appendChild(cartProduct);
+  });
+  loadPrice(allProductsCart);
 }
-
-renderCartStorage();
-
 function loadPriceCard(price, quantity) {
   return parseInt(price.replace(/[^0-9.-]+/g, "")) * quantity;
 }
@@ -169,8 +168,8 @@ function changeQuantityAdd(array, id) {
   loadPriceCard(productChange.precio, productChange.cantidad);
   loadPrice(allProductsCart);
   addQuantity(id);
-  localStorage.removeItem(`product ${productFind.id}`);
-  guardar(`product ${productFind.id}`, productFind);
+  localStorage.removeItem(`product ${id}`);
+  guardar(`product ${id}`, productChange);
   console.log(productChange.cantidad);
 }
 
@@ -183,11 +182,14 @@ function changeQuantityRemove(array, id) {
     productChangeRemove.cantidad
   );
   removeQuantity(id);
-
+  localStorage.removeItem(`product ${id}`);
+  guardar(`product ${id}`, productChangeRemove);
   if (productChangeRemove.cantidad === 0) {
     document.getElementById(`cart-product ${id}`).remove();
+    localStorage.removeItem(`product ${id}`);
   }
   console.log(productChangeRemove.cantidad);
+
   loadPrice(allProductsCart);
 }
 

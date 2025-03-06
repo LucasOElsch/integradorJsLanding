@@ -1,3 +1,5 @@
+let cartStorage = [];
+
 const leer = (key, data) => {
   let info = localStorage.getItem(key);
   if (!info) {
