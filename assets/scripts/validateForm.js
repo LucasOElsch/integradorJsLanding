@@ -42,5 +42,8 @@ function checkUser(usuario, contrasena) {
     window.location.href = "http://127.0.0.1:5500/index.html";
     sessionStorage.setItem("loginTrue", true);
     sessionStorage.setItem("userName", user);
+  } else {
+    alert("Usuario no encontrado");
+    window.location.reload();
   }
 }
