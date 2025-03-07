@@ -64,11 +64,7 @@
             }
         }
 
-        .navbar_logo {
-            width: 70px;
-            height: auto;
-            margin: 0 auto;
-        }
+       
     }
 
 
@@ -905,6 +901,8 @@ body{
 
 
 
+
+
 #products-items {
     display: flex;
     flex-wrap: wrap;
@@ -1071,6 +1069,10 @@ footer {
         padding: 0 10px;
         margin: 0 auto;
     }
+}
+
+.navbar_logo{
+    display: none;
 }
 }
 
@@ -1431,6 +1433,9 @@ footer {
         margin: 0 auto;
     }
 }
+.navbar_logo{
+    display: none;
+}
 
 }
 
@@ -1786,6 +1791,10 @@ footer {
         margin: 0 auto;
     }
 }
+
+.navbar_logo{
+    display: none;
+}
 }
 
 @media(min-width: 1240px) and (max-width: 1500px){
@@ -2025,7 +2034,7 @@ body{
 #img-comunicado{
     display: block !important;
     width: 100%;
-    height: 500px;
+    height: 420px;
     object-fit: cover;
 }
 
@@ -2113,6 +2122,10 @@ footer {
         margin: 0 auto;
     }
 }
+
+.navbar_logo{
+    display: none;
+}
 }
 
 @media(min-width: 1500px) and (max-width: 1920px){
@@ -2157,6 +2170,14 @@ body{
         justify-content: center;
         align-items: center;
 
+    }
+
+    .navbar_logo{
+            display: block;
+            width: 70px;
+            height: auto;
+            margin: 0 auto;
+    
     }
 
     .camisetasContainer-text{
