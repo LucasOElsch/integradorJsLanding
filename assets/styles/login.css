@@ -35,16 +35,17 @@ img{
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.8);
-    padding: 50px;
+    padding: 40px;
     border-radius: 10px;
-    width: 600px;
+    width: 80%;
+    max-width: 600px;
     color: white;
     height: auto;
 label{
         font-size: 20px;
         font-weight: 500;
         color: #66afe9;
-}
+    }
     input {
         width: 100%;
         padding: 15px;
@@ -105,5 +106,31 @@ label{
         background-color: #16457b;
         transition: .5s;
         border: 2px solid rgb(255, 255, 0);
+    }
+}
+
+
+@media (min-width: 375px) and (max-width: 800px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    #ojoInputOn{
+        position: relative;
+        left: 86% !important;
+        top: -50px;
+        cursor: pointer;
+        width: 25px;
+        height: auto;
+    }
+    #ojoInputOff{
+        position: relative;
+        left: 86% !important;
+        top: -50px;
+        cursor: pointer;
+        width: 25px;
+        height: auto;
     }
 }
