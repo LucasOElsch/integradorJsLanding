@@ -1,6 +1,6 @@
 let allContainerCart = document.getElementById("products-items");
 let allProductsCart = [];
-
+/*ELEMENTOS DEL TOTAL*/
 const priceTotalElement = document.getElementById("priceTotal");
 const totalCart = document.getElementById("total-cart");
 /*CONTENEDOR DEL CARRITO*/
@@ -44,6 +44,7 @@ function getProductInfo(product) {
   renderCart();
 }
 
+/*FUNCION DE RENDERIZADO DE CARRITO */
 function renderCart() {
   document.querySelector(".carrito").innerHTML = "";
   allProductsCart.forEach((product) => {
@@ -81,6 +82,7 @@ function renderCart() {
   loadPrice(allProductsCart);
 }
 
+/*FUNCION DE RENDERIZADO DE PRODUCTOS DEL CARRITO EN EL LOCAL STORAGE*/
 if (localStorage.length > 0) {
   renderCartStorage();
 }
@@ -125,10 +127,12 @@ function renderCartStorage() {
   });
   loadPrice(allProductsCart);
 }
+
+/*FUNCION QUE ACTUALIZA EL PRECIO DE LA CARD DEL PRODUCTO EN CARRITO */
 function loadPriceCard(price, quantity) {
   return parseInt(price.replace(/[^0-9.-]+/g, "")) * quantity;
 }
-
+/*FUNCION QUE ACTUALIZA EL PRECIO TOTAL DEL CARRITO*/
 function loadPrice(array) {
   let priceTotal = 0;
   array.forEach((product) => {
@@ -140,11 +144,13 @@ function loadPrice(array) {
 
 const cartProductContainer = document.querySelector(".cart-container");
 
+/*EVENTOS DE ESCUCHA PARA LA FUNCION DE ELIMINAR PRODUCTO Y PARA SUMAR O QUITAR CANTIDAD */
 function loadCartListeners() {
   cartProductContainer.addEventListener("click", removeProduct);
   cartProductContainer.addEventListener("click", addRemoveProduct);
 }
 
+/*FUNCION QUE AÑADE O QUITA UN PRODUCTO A LA CANTIDAD*/
 function addRemoveProduct(e) {
   if (e.target.classList.contains("masBtn")) {
     let productAddId = e.target.getAttribute("id");
@@ -202,6 +208,7 @@ function removeQuantity(id) {
   quantityElement.textContent = parseInt(quantityElement.textContent) - 1;
 }
 
+/*FUNCION QUE BORRA EL PRODUCTO DEL CARRITO */
 function removeProduct(e) {
   if (e.target.classList.contains("borrarProductBtn")) {
     const productoBorrar = e.target.parentElement.parentElement;
@@ -210,6 +217,7 @@ function removeProduct(e) {
     allProductsCart = allProductsCart.filter(
       (product) => product.id !== productId
     );
+    localStorage.removeItem(`product ${productId}`);
   }
   loadPrice(allProductsCart);
 }

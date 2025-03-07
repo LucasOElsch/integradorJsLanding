@@ -6,6 +6,7 @@ const navbarTitle = document.querySelector(".navbar-title");
 
 openMenuBtn.addEventListener("click", () => {
   openMenu();
+  closeCart();
 });
 
 closeMenuBtn.addEventListener("click", () => {
@@ -25,9 +26,11 @@ window.addEventListener("scroll", () => {
     navBar.style.backgroundColor = "#173b6a";
     navbarTitle.style.backgroundColor = "#16457b";
     navBar.style.transition = "all 0.5s";
+    document.querySelector(".navbar_logo").style.display = "block";
   } else if (window.scrollY < 689) {
     navBar.style.backgroundColor = "transparent";
     navBar.style.transition = "all 0.5s";
+    document.querySelector(".navbar_logo").style.display = "none";
   }
 });
 

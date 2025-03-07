@@ -3,8 +3,16 @@ const btnCloseCart = document.querySelector(".cart-close");
 
 const cart = document.querySelector(".cart-container");
 btnOpenCart.addEventListener("click", () => {
-  cart.style.display = "flex";
+  openCart();
+  closeMenu();
 });
 btnCloseCart.addEventListener("click", () => {
-  cart.style.display = "none";
+  closeCart();
 });
+
+function openCart() {
+  cart.style.display = "flex";
+}
+function closeCart() {
+  cart.style.display = "none";
+}
